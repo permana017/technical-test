@@ -1,8 +1,7 @@
 <script setup>
-import axios from "axios";
 import Logo2 from "../components/Logo2.vue";
 import Logo1 from "../components/Logo1.vue";
-import { onMounted, ref, defineProps } from "vue";
+import { ref, defineProps } from "vue";
 
 const data = ref([]);
 const onClick = ref("");
@@ -15,10 +14,6 @@ const props = defineProps({
 const handleClick = (val) => {
   props.test = val;
 };
-
-onMounted(() => {
-  console.log("test dulu", props.test);
-});
 </script>
 
 <template>

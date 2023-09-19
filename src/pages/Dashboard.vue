@@ -1,7 +1,7 @@
 <script setup>
 import axios from "axios";
 import { onMounted, ref, computed } from "vue";
-import Card from "../components/card.vue";
+import Card from "../components/Card.vue";
 import card from "../assets/js/card";
 import ListUser from "../components/ListUser.vue";
 import DashboardLayout from "../layouts/DashboardLayout.vue";
@@ -18,23 +18,6 @@ const getData = async () => {
       console.log(err);
     });
 };
-
-const convertDate = computed((date) => {
-  let test = data.value;
-  let dateString = date;
-  let dateArr = dateString.split("");
-  let result = "";
-  for (let i = 0; i < dateArr.length; i++) {
-    if (dateArr[i] === "-") {
-      result += " / ";
-    } else if (dateArr[i] !== "T") {
-      result += dateArr[i];
-    } else {
-      i = dateArr.length;
-    }
-  }
-  return result;
-});
 
 onMounted(() => {
   getData();
