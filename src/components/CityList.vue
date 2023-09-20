@@ -73,31 +73,33 @@ onMounted(() => {});
         <li class="w-[40%]">Id Province</li>
       </ul>
     </div>
-    <div
-      class="flex py-[18px] font-normal text-[12px] text-[#686868] justify-start"
-      v-if="cityById"
-    >
-      <p class="w-[60px] text-center">{{ cityById.id }}</p>
-      <ul class="flex w-full">
-        <li class="w-[50%] text-[#080808] font-medium flex items-center">
-          {{ cityById.name }}
-        </li>
-        <li class="w-[40%] ml-5">{{ cityById.provinsi_id }}</li>
-      </ul>
-    </div>
-    <div
-      v-else
-      class="flex py-[18px] font-normal text-[12px] text-[#686868] justify-start"
-      v-for="(item, index) in city"
-      :key="index"
-    >
-      <p class="w-[60px] text-center">{{ item.id }}</p>
-      <ul class="flex w-full">
-        <li class="w-[50%] text-[#080808] font-medium flex items-center">
-          {{ item.name }}
-        </li>
-        <li class="w-[40%] ml-5">{{ item.provinsi_id }}</li>
-      </ul>
+    <div class="overflow-y-scroll h-[65vh]">
+      <div
+        class="flex py-[18px] font-normal text-[12px] text-[#686868] justify-start"
+        v-if="cityById"
+      >
+        <p class="w-[60px] text-center">{{ cityById.id }}</p>
+        <ul class="flex w-full">
+          <li class="w-[50%] text-[#080808] font-medium flex items-center">
+            {{ cityById.name }}
+          </li>
+          <li class="w-[40%] ml-5">{{ cityById.provinsi_id }}</li>
+        </ul>
+      </div>
+      <div
+        v-else
+        class="flex py-[18px] font-normal text-[12px] text-[#686868] justify-start"
+        v-for="(item, index) in city"
+        :key="index"
+      >
+        <p class="w-[60px] text-center">{{ item.id }}</p>
+        <ul class="flex w-full">
+          <li class="w-[50%] text-[#080808] font-medium flex items-center">
+            {{ item.name }}
+          </li>
+          <li class="w-[40%] ml-5">{{ item.provinsi_id }}</li>
+        </ul>
+      </div>
     </div>
   </section>
 </template>
