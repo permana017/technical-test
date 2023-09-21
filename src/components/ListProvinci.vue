@@ -73,7 +73,7 @@ onMounted(() => {});
         <li class="w-[40%]">Id Wilayah</li>
       </ul>
     </div>
-    <div class="overflow-y-scroll h-[65vh]">
+    <div class="overflow-y-scroll h-[55vh]">
       <div
         class="flex py-[18px] font-normal text-[12px] text-[#686868] justify-start"
         v-if="provById"
